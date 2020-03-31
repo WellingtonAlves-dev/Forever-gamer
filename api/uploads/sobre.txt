@@ -1,0 +1,2 @@
+Nesta pasta fica todos os arquivos de uploads, mas para acessar os arquivos dessa pasta é necessario usar a url
+http://<site>:<port>/imagens/<nomedoarquivo>.<extensão>
