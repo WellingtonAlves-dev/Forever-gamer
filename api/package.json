@@ -1,0 +1,19 @@
+{
+  "name": "games-forever",
+  "version": "1.0.0",
+  "description": "Projeto pessoal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wellington R. Alves",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "nedb": "^1.8.0"
+  }
+}
