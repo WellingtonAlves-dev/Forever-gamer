@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever gamer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body class='bg-dark'>
+    <nav class='navbar bg-dark navbar-dark shadow'>
+        <a class='navbar-brand'>Games Forever</a>
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#uploadModal">
+            Adicionar jogo
+        </button>
+    </nav>
+
+    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Adicionar Jogo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class='form-group'>
+                        <label>Imagem do jogo</label>
+                        <input type='file' class='form-control-file' id='imagem_jogo' onchange="readURL(this);">
+                        <img src='...' class='img_demon' />
+                    </div>
+                    <div class='form-group'>
+                        <label>Nome do jogo</label>
+                        <input type='text' class='form-control' id='nome_jogo' placeholder=" Nome do jogo aqui">
+                    </div>
+                    <div class='form-group'>
+                        <label>Breve descrição</label>
+                        <input type='text' class='form-control' id='desc_jogo' placeholder="Descrição do jogo">
+                    </div>
+                    <div class='form-group'>
+                        <label>Nota do jogo</label>
+                        <div class='estrelas_rating'>
+                            <span class="fa fa-star s1 checked" data='1'></span>
+                            <span class="fa fa-star s2" data='2'></span>
+                            <span class="fa fa-star s3" data='3'></span>
+                            <span class="fa fa-star s4" data='4'></span>
+                            <span class="fa fa-star s5" data='5'></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id='sendData'>Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-white">
+        <div class="container">
+            <h1 class="display-4">Forever gamer</h1>
+            <p class="lead">As melhores avaliações de jogos</p>
+        </div>
+    </div>
+
+
+    <!-- Content -->
+
+    <div class='container'>
+        <div class='row d-flex justify-content-center' id='root'>
+        </div>
+    </div>
+    <script src='js/modal.js'></script>
+    <script src='js/insertData.js'></script>
+    <script src='js/getData.js'></script>
+</body>
+
+</html>
